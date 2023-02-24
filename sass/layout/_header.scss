@@ -29,13 +29,16 @@
         top: 40%;
         left: 50%;
         transform: translate(-50%, -50%);
+        text-align: center;
     }
 
+    &__logo:hover {
+        animation: moveInRight 1s ease-out;
+    }
+    
+
 }
 
-.logo:hover {
-    animation: moveInRight 1s ease-out;
-}
 
 
 
