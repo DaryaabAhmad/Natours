@@ -15,6 +15,11 @@
         box-shadow: 0 1rem 3rem rgba($color-black , .1);
         text-align: center;
         cursor: pointer;
+
+        @include respond(tab-port) {
+            top: 4rem;
+            right: 4rem;
+        }
     }
 
     &__background {
@@ -30,6 +35,16 @@
         transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
 
         // transform: scale(80);
+
+        @include respond(tab-port) {
+            top: 4.5rem;
+            right: 4.5rem;
+        }
+
+        @include respond(phone) {
+            top: 3.5rem;
+            right: 3.5rem;
+        }
     }
 
     &__nav {
@@ -37,16 +52,15 @@
         // width: 100%;
         position: fixed;
         top: 0;
-        right: 0;
+        left: 0;
         z-index: 1500;
-        background-color: orangered;
+        // background-color: orangered;
 
         opacity: 0;
         width: 0;
         transition: all .8s;
 
     }
-
 
     &__list {
         position: absolute;
@@ -66,6 +80,7 @@
 
 
     &__link {
+
         &:link,
         &:visited {
             display: inline-block;
@@ -83,14 +98,14 @@
             // for navigation border selector
             transition: all .4s;
 
-            // span {
-            //     margin-right: 1.5rem;
-            //     display: inline-block;
+            span {
+                margin-right: 1.5rem;
+                display: inline-block;
 
-            // }
+            }
         }
 
- 
+
         &:hover,
         &:active {
             background-position: 100%;
@@ -106,16 +121,16 @@
 
     &__checkbox:checked~&__nav {
         opacity: 1;
-        width: 100;
+        width: 100%;
     }
 
     // icon
     &__icon {
-        // position: relative;
-        // margin-top: 3.5rem;
+        position: relative;
+        margin-top: 3.5rem;
 
-        & 
-        &::before
+        &,
+        &::before,
         &::after {
             width: 3rem;
             height: 2px;
@@ -131,10 +146,14 @@
             transition: all .2s;
         }
 
-        &::before {top: -.8rem; 
-            // transform-origin:right ;
+        &::before {
+            top: -.8rem;
         }
-        &::after {top: .8rem;}
+
+        // transform-origin:right ;
+        &::after {
+            top: .8rem;
+        }
     }
 
     &__button:hover &__icon::before {
@@ -159,7 +178,7 @@
         transform: rotate(-135deg);
     }
 
-    
+
 
 
 }
