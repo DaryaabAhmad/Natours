@@ -15,6 +15,7 @@
         top: 0;
         left: 0;
         width: 100%;
+        // ~webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         border-radius: .3rem;
         overflow: hidden;
@@ -141,9 +142,7 @@
         }
     }
 
-
     // FRONT SIDE STYLING
-
     &__cta {
         position: absolute;
         top: 50%;
@@ -181,9 +180,9 @@
     only screen and (hover: none) {
 
         height: auto;
-        border-radius: 3px;
-        background-color: $color-white;
-        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        // border-radius: 3px;
+        // background-color: $color-white;
+        // box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
 
         &__side {
             height: auto;
@@ -230,12 +229,3 @@
 
 
 
-// width: 75%;
-// text-align: right;
-// position: ABSOLUTE;
-// top: 12rem;
-// right: 2rem;
-// padding: 1rem 1.5rem;
-// color: white;
-// text-transform: uppercase;
-// font-size: 2.8rem;
